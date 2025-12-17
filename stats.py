@@ -12,3 +12,14 @@ def character_count(file_contents):
         else:
             symbols[i] = 1
     return symbols
+
+def sort_on(text):
+    return text["num"]
+
+def sorted_dictionary(file_contents):
+    ready = []
+    for i in file_contents:
+        number = file_contents[i]
+        ready.append({"char": i, "num": number})
+    ready.sort(reverse=True, key=sort_on)
+    return ready

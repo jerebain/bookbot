@@ -6,9 +6,10 @@ def get_book_text(path_to_file):
 def main():
     print(get_book_text("books/frankenstein.txt"))
 
-from stats import word_count, character_count
+from stats import word_count, character_count, sorted_dictionary
 
 contents = get_book_text("books/frankenstein.txt")
 total_words = word_count(contents)
-print(f"Found {total_words} total words")
-print(character_count(contents))
+dictionary_text = character_count(contents)
+sorted = sorted_dictionary(dictionary_text)
+print (f"============ BOOKBOT ============ Analyzing book found at books/frankenstein.txt... ------------ Word Count ------------ Found {total_words} total words ------------ Character Count ------------ {sorted}")
